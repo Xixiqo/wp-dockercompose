@@ -23,7 +23,7 @@ services:
   wordpress:
     build:
       context: ./wordpress
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: wp_web
     environment:
       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST:-db}
