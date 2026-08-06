@@ -38,6 +38,7 @@ services:
       - wordpress_data:/var/www/html
     networks:
       - wp-internal
+      - wp-public
     cpus: "0.5"
     mem_limit: 512m
 
@@ -96,4 +97,5 @@ volumes:
 networks:
   wp-internal:
     internal: true
+  wp-public:
   nginx-public:
