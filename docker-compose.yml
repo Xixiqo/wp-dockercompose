@@ -11,6 +11,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html:ro
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - nginx_fastcgi_cache:/var/cache/nginx/wordpress
     networks:
       - nginx-public
       - wp-internal
@@ -95,7 +96,8 @@ services:
 volumes:
   mariadb_data:
   wordpress_data:
-
+  nginx_fastcgi_cache:
+  
 networks:
   wp-internal:
     internal: true
