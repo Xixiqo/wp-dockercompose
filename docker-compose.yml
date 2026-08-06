@@ -16,7 +16,7 @@ services:
 
   wordpress:
     # WordPress berjalan sebagai PHP-FPM agar Nginx menangani request web.
-    image: wordpress:php-fpm-alpine
+    image: wordpress:php8.4-fpm-alpine
     container_name: wp-wordpress
     restart: unless-stopped
     depends_on:
