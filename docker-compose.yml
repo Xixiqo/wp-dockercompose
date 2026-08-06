@@ -12,6 +12,7 @@ services:
       - wordpress_data:/var/www/html:ro
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
+      - nginx-public
       - wp-internal
     cpus: "0.5"
     mem_limit: 256m
@@ -95,3 +96,4 @@ volumes:
 networks:
   wp-internal:
     internal: true
+  nginx-public:
